@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de Programación en JavaScript</h1>
+    <h3>Mario Edmundo Ac Hernández</h3>
+    <h3>No. Control: 18390055</h3>
+    <div class="mt-4 mb-2">
+        <a href="../../Vista/act-unidad3.html#tema_3.4" class="fs-4">Regresar</a>
+    </div>
+    <h3>Ejercicio 27</h3>
+    <p>"Ejecución del ejercicio en la consola"</p>
+    <p>Programa una clase llamada Pelicula.<br>
+
+        La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.<br><br>
+            - Todos los datos del objeto son obligatorios.<br>
+            - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.<br>
+            - Valida que el título no rebase los 100 caracteres.<br>
+            - Valida que el director no rebase los 50 caracteres.<br>
+            - Valida que el año de estreno sea un número entero de 4 dígitos.<br>
+            - Valida que el país o paises sea introducidos en forma de arreglo.<br>
+            - Valida que los géneros sean introducidos en forma de arreglo.<br>
+            - Valida que los géneros introducidos esten dentro de los géneros aceptados*.<br>
+            - Crea un método estático que devuelva los géneros aceptados*.<br>
+            - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.<br>
+            - Crea un método que devuelva toda la ficha técnica de la película.<br>
+            - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.<br><br>
+        
+        * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western</p>
+    </div>
+
+<script>
+/*27) Programa una clase llamada Pelicula.
+
+La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+    - Todos los datos del objeto son obligatorios.
+    - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+    - Valida que el título no rebase los 100 caracteres.
+    - Valida que el director no rebase los 50 caracteres.
+    - Valida que el año de estreno sea un número entero de 4 dígitos.
+    - Valida que el país o paises sea introducidos en forma de arreglo.
+    - Valida que los géneros sean introducidos en forma de arreglo.
+    - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
+    - Crea un método estático que devuelva los géneros aceptados*.
+    - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+    - Crea un método que devuelva toda la ficha técnica de la película.
+    - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
+
+* Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western*/
+
+class Pelicula{
+
+    constructor({idPelicula,titulo,director,estreno,pais,generos,calificacion}){
+        this.idPelicula=idPelicula;
+        this.titulo=titulo;
+        this.director=director;
+        this.estreno=estreno;
+        this.pais=pais;
+        this.generos=generos;
+        this.calificacion=calificacion;
+
+        this.validarIdPelicula(idPelicula);
+        this.validarTitulo(titulo);
+        this.validarDirector(director);
+        this.validarEstreno(estreno);
+        this.validarPais(pais);
+        this.validarGeneros(generos);
+        this.validarCalificacion(calificacion);
+    }
+
+    static get getListaGeneros(){
+        return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"];
+    }
+
+    static generosAceptados(){
+        return console.info(`Los generos aceptados son: ${Pelicula.getListaGeneros.join(", ")}`);
+    }
+    
+    //Valida que sea cadena de texto
+    validarCadena(propiedad,valor){
+        if(!valor){
+            return console.warn(`${propiedad} "${valor}" está vacío`);
+        }
+        
+        if(typeof valor !== "string"){
+            return console.error(`${propiedad} "${valor}" ingresado, NO es una cadena de texto`);
+        }
+        return true;
+    }
+
+    //Valida que sea cadena de texto
+    validarNumero(propiedad,valor){
+        if(!valor){
+            return console.warn(`${propiedad} "${valor}" está vacío`);
+        }
+        
+        if(typeof valor !== "number"){
+            return console.error(`${propiedad} "${valor}" ingresado, NO es un número`);
+        }
+        return true;
+    }
+
+    //Valida que la longitud de la cadena sea correcta
+    validarLongitud(propiedad,valor,longitud){
+        if(valor.length > longitud){
+            return console.error(`${propiedad} "${valor}" excede el número de caracteres permitidos (${longitud})`);
+        }
+        return true;
+    }
+
+    //Se valida que sea un arreglo
+    validarArreglo(propiedad,valor){
+        if(valor===undefined){
+                return console.warn(`${propiedad} "${valor}" está vacío`);
+        }
+        if(!(valor instanceof Array)){
+                return console.warn(`${propiedad} "${valor}" ingresado, NO es un arreglo`);
+        }
+        if(valor.length===0){
+            return console.warn(`${propiedad} "${valor}" NO tiene datos`);
+        }
+        for (const numero of valor){
+            if(typeof(numero) !== "string"){
+                return console.error(`${propiedad} "${numero}" ingresado, NO es una cadena de texto`);
+            }
+        }
+        return true;
+    }
+
+    //Valida que la id ingresada sea correcta
+    validarIdPelicula(id){
+        if(this.validarCadena("IMDB id",id)){
+            if(!(/^([a-z]){2}([0-9]){7}$/.test(id))){
+                return console.error(`El IMDB id "${id}" no es válido, debe tener 9 caracteres, los 2 primeros letras minusculas y los 7 restantes números.`)
+            }
+        }
+    }
+
+    //Valida que el año de estreno ingresada sea correcta
+    validarEstreno(estreno){
+        if(this.validarNumero("Año de estreno",estreno)){
+            if(!(/^([0-9]){4}$/.test(estreno))){
+                return console.error(`El año de estreno"${estreno}" no es válido, debe ser un numero de 4 digitos`)
+            }
+        }
+    }
+
+    //Valida el titulo de la pelicula
+    validarTitulo(titulo){
+        if(this.validarCadena("Titulo",titulo)){
+            this.validarLongitud("Titulo",titulo,100);
+        }
+    }
+
+    //Valida el nombre del director
+    validarDirector(director){
+        if(this.validarCadena("Director",director)){
+            this.validarLongitud("Director",director,50);
+        }
+    }
+
+    //Valida el año de estreno de la pelicula
+    validarEstreno(estreno){
+        if(this.validarNumero("Estreno",estreno)){
+            this.validarLongitud("Estreno",estreno,4);
+        }
+    }
+
+    validarPais(pais){
+        this.validarArreglo("País", pais);
+    }
+
+    validarGeneros(generos){
+        if(this.validarArreglo("Generos", generos)){
+            for (const genero of generos){
+                //console.log(genero, Pelicula.getListaGeneros.includes(genero))
+                if(!(Pelicula.getListaGeneros.includes(genero))){
+                    console.error(`Géneros incorrectos "${generos.join(", ")}"`);
+                    Pelicula.generosAceptados();
+                }
+            }
+        }
+    }
+
+    validarCalificacion(calificacion){
+        if(this.validarNumero("Calificacion",calificacion)){
+            return (calificacion < 0 || calificacion > 10)
+                ? console.log("La calificacion debe ser un número entre 0 y 10")
+                : this.calificacion = calificacion.toFixed(1);
+        }
+    }
+
+    fichaTecnica(){
+    console.info(`Ficha Técnica:\nTitulo: ${this.titulo}\nDirector: ${this.director}\nAño: ${this.estreno}\nPais: ${this.pais}\nGéneros: ${this.generos}\nCalificación: ${this.calificacion}\nIMDB id: ${this.idPelicula}`);
+    }
+}
+
+    //tt0075148
+    //tt0019130
+    //tt0145487
+    //tt4154796
+    //Pelicula.generosAceptados();
+    const peli= new Pelicula({
+        idPelicula: "tt1234567",
+        titulo: "SpiderMan",
+        director: "Juan Carlos",
+        estreno: 2021,
+        pais: ["México","Canada"],
+        generos: ["Action","Romance"],
+        calificacion: 5.8967
+    });
+    console.log("-------------🎈🎈Ejercicio 27 Clases y métodos🎈🎈-------------")
+    peli.fichaTecnica();
+    console.log("-----------Impresión dinámica de fichas ténicas-----------")
+    const misPeliculas = [
+        {
+            idPelicula: "tt9876543",
+            titulo: "Avengers Infinity Wars",
+            director: "Mario Ac",
+            estreno: 2021,
+            pais: ["USA","Canada"],
+            generos: ["Action","Romance"],
+            calificacion: 9.8929
+        },
+        {
+            idPelicula: "tt1234567",
+            titulo: "Rocky",
+            director: "Roberto Ramirez",
+            estreno: 2015,
+            pais: ["Inglaterra"],
+            generos: ["Action","Adventure"],
+            calificacion: 8.6872
+        },
+        {
+            idPelicula: "tt0145487",
+            titulo: "Transformers",
+            director: "Sofia Castillo",
+            estreno: 2017,
+            pais: ["USA"],
+            generos: ["Action","Mystery"],
+            calificacion: 9.762
+        }
+    ]
+
+    misPeliculas.forEach(pelicula => { 
+        new Pelicula(pelicula).fichaTecnica();
+        console.log("---------------------------");
+    });
+
+</script>
+</body>
+</html>

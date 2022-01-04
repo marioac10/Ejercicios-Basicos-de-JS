@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Ejercicios de Programación en JavaScript</h1>
+    <br>
+    <h3>Mario Edmundo Ac Hernández</h3>
+    <h3>No. Control: 18390055</h3>
+
+    <h4>La ejecución de los ejercicios están en la consola</h4>
+
+    <div class="mt-4 mb-5">
+        <a href="../../Vista/act-unidad3.html#tema_3.4" class="fs-4">Regresar</a>
+    </div>
+
+    <h5 class="mt-4">Ejercicio 1</h5>
+    <p>Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
+    <div class="row mb-4">
+        <div class="col-6">
+            <div class="input-group ">
+                <input id="ejercicio1" class="form-control col-5" type="text">
+                <button class="btn btn-primary" onclick="numCaracteress()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+
+    <h5>Ejercicio 2</h5>
+    <p>Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".</p>
+    <div class="row mb-4">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="ejercicio2">Cadena: </label>
+                <input id="ejercicio2-cadena"class="form-control" type="text" style="margin-right: 1rem;">
+                
+                <label for="">Número: </label>
+                <input id="ejercicio2-numero"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="textoRecortadoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <h5>Ejercicio 3</h5>
+    <p>Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].</p>
+    <div class="row mb-4">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Cadena</label>
+                <input id="ejercicio3-cadena"class="form-control" type="text" style="margin-right: 1rem;">
+
+                <label for="">Separador:</label>
+                <input id="ejercicio3-separador"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="separarTextoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <h5>Ejercicio 4</h5>
+    <p>Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="#">Texto:</label>
+                <input id="ejercicio4-texto" class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="#">Veces:</label>
+                <input id="ejercicio4-veces" class="form-control" type="text">
+                <button class="btn btn-primary" onclick="repetirTextoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 5</h5>
+    <p> Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio5-cadena"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="invertirPalabrass()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 6</h5>
+    <p>Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Texto: </label>
+                <input id="ejercicio6-cadena"class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="">Palabra:</label>
+                <input id="ejercicio6-palabra"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="contarPalabraRepetidaa()">Ejecutar</button>        
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 7</h5>
+    <p>Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio7-palabra"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="palindromoo()">Ejecutar</button>        
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 8</h5>
+    <p>Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="Cadena:"></label>
+                <input id="ejercicio8-cadena" class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="">Patrón:</label>
+                <input id="ejercicio8-patron" class="form-control" type="text">
+                <button class="btn btn-primary" onclick="eliminarCaracteress()">Ejecutar</button>        
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 9</h5>
+    <p>Programa una función que obtenga un numero aleatorio entre 501 y 600.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <button class="btn btn-primary" onclick="numeroAleatorioo()">Ejecutar</button>        
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 10</h5>
+    <p>Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio10-numero" class="form-control" type="text">
+                <button class="btn btn-primary" onclick="numeroCapicuaa()">Ejecutar</button>        
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 11</h5>
+    <p>Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio11-numero"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="factoriall()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <h5>Ejercicio 12</h5>
+    <p>Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio12-numero"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="numeroPrimoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 13</h5>
+    <p>Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio13-numero"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="numeroParImparr()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 14</h5>
+    <p>Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Grados: </label>
+                <input id="ejercicio14-grados"class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="">Tipo de escala:</label>
+                <input id="ejercicio14-tipo"class="form-control" type="text" placeholder="Escriba C o F">
+                <button class="btn btn-primary" onclick="gradosConversionn()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 15</h5>
+    <p>Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Número:</label>
+                <input id="ejercicio15-numero"class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="">Tipo de base:</label>
+                <input id="ejercicio15-base"class="form-control" type="text" placeholder="Escriba 2 o 10">
+                <button class="btn btn-primary" onclick="baseBinariaa()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 16</h5>
+    <p>Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Cantidad: </label>
+                <input id="ejercicio16-cantidad"class="form-control" type="text" style="margin-right: 1rem;">
+                <label for="">Descuento (%):</label>
+                <input id="ejercicio16-des"class="form-control" type="text" placeholder="">
+                <button class="btn btn-primary" onclick="calculaMontoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 17</h5>
+    <p>Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio17-date"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="calculaAnioss()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 18</h5>
+    <p>Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio18-cadena"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="cuentaVocaless()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 19</h5>
+    <p>Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio19-nombre"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="validarNombree()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 20</h5>
+    <p>Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio20-correo"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="validarCorreoo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 21</h5>
+    <p>Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <label for="">Array numérico: </label>
+                <input id="ejercicio21-array"class="form-control" type="text" placeholder="Escriba p. ej. [1,4,5] ">
+                <button class="btn btn-primary" onclick="arrayNumm()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 22</h5>
+    <p>Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio22-array"class="form-control" type="text" placeholder="Escriba p. ej. [1, 4, 5, 99, -60]">
+                <button class="btn btn-primary" onclick="numMaxMinn()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 23</h5>
+    <p>Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio23-array" class="form-control" type="text" placeholder="Escriba p. ej. [1,2,3,4,5,6,7,8,9,0]">
+                <button class="btn btn-primary" onclick="objArregloo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 24</h5>
+    <p>Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7,5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio24-array" class="form-control" type="text" placeholder="Escriba p. ej. [7,5,7,8,6]">
+                <button class="btn btn-primary" onclick="arrayADD()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 25</h5>
+    <p>Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio25-array"class="form-control" type="text">
+                <button class="btn btn-primary" onclick="arrayDuplicadoss()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h5>Ejercicio 26</h5>
+    <p>Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.</p>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="ejercicio26-array"class="form-control" type="text" placeholder="Escriba p. ej. [9,8,7,6,5,4,3,2,1,0]">
+                <button class="btn btn-primary" onclick="arrayPromedioo()">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="mt-4 mb-5">
+        <a href="../../Vista/act-unidad3.html#tema_3.4" class="fs-4">Regresar</a>
+    </div>
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        /*1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.*/
+        /*function numCaracteres(cadena=""){
+            if(!cadena){
+                console.warn("Por favor, ingresa una cadena de texto");
+
+            }else{
+                console.log(`La cadena ingresada "${cadena}" tiene ${cadena.length} caracteres.`);
+            }
+        }*/
+
+        const d=document;
+        console.log("-----------------🎈🎈Ejercicio 1🎈🎈-----------------")
+        console.info("");
+        
+        const numCaracteres = (cadena = "")=>{
+            (!cadena)?
+                console.warn("Por favor, ingresa una cadena de texto")
+            :
+                console.info(`La cadena ingresada "${cadena}" tiene ${cadena.length} caracteres`);
+
+        }
+        
+        numCaracteres();
+        numCaracteres("Hola Mundo");
+        numCaracteres(123);
+
+        const numCaracteress = ()=>{
+            let cadena =  document.getElementById("ejercicio1").value;
+            (!cadena)?
+                alert("Por favor, ingresa una cadena de texto")
+            :
+                alert(`La cadena ingresada "${cadena}" tiene ${cadena.length} caracteres`);
+
+        }
+
+        /*2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".*/
+        console.log("-----------------🎈🎈Ejercicio 2🎈🎈-----------------");
+        console.log("");
+        const textoRecortado = (cadena = "", longitud=undefined)=>{
+            (!cadena)
+            ? console.warn("Por favor, ingrese una cadena de texto")
+            : (longitud=== undefined)
+            ? console.warn("No ha ingresado una longitud para recortar el texto")
+            : console.log(cadena.slice(0,longitud));
+        }
+
+        textoRecortado("How are you?",4);
+        textoRecortado("Hola hola");
+        textoRecortado("",5);
+
+        
+        const textoRecortadoo = ()=>{
+            let cadena = d.getElementById("ejercicio2-cadena").value,
+                longitud = d.getElementById("ejercicio2-numero").value;
+            (!cadena)
+            ? alert("Por favor, ingrese una cadena de texto")
+            : (longitud=== undefined)
+            ? alert("No ha ingresado una longitud para recortar el texto")
+            : alert(cadena.slice(0,longitud));
+        }
+
+        /*3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].*/
+        console.log("-----------------🎈🎈Ejercicio 3🎈🎈-----------------");
+        console.log("");
+        const separarTexto= (cadena="",separador=undefined)=>{
+            (!cadena)
+            ?
+            console.warn("Por favor, ingresa una cadena de texto")
+            : (separador===undefined) 
+                ? console.warn("No ha ingresado el caracter separador")
+                : console.log(cadena.split(separador))
+        }
+
+        separarTexto("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida nunc sed leo imperdiet maximus sit amet vitae lacus. Nam maximus ultrices justo et condimentum. Donec tempus ultrices mollis."," ");
+        separarTexto("Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",",")
+        separarTexto();
+        separarTexto("Hola Mundo");
+        separarTexto("","-");
+
+        const separarTextoo= ()=>{
+            let cadena= d.getElementById("ejercicio3-cadena").value,
+                separador = d.getElementById("ejercicio3-separador").value;
+            (!cadena)
+            ?
+            alert("Por favor, ingresa una cadena de texto")
+            : (separador===undefined) 
+                ? alert("No ha ingresado el caracter separador")
+                : alert(cadena.split(separador))
+        }
+
+        /*4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*/
+        console.log("-----------------🎈🎈Ejercicio 4🎈🎈-----------------")
+        console.log("");
+        const repetirTexto = (texto="",veces=undefined)=>{
+            if(!texto){
+                return console.warn("No ha ingresado un texto");
+            }else if(veces===undefined){
+                return console.warn("No ha ingresado el número de veces a repetir el texto");
+            }else if(veces===0){
+                return console.error("El número de veces no puede ser 0");
+            }else if(Math.sign(veces)=== -1){
+                return console.error("El número de veces no puede ser negativo");
+            }else{
+                for (let i = 0; i < veces; i++) {
+                    console.info(`${texto}, ${i+1}`);
+                }
+            }
+        }
+
+        repetirTexto("Hola Mundo", 3);
+        repetirTexto("Hola Mundo", 0);
+        repetirTexto("Hola Mundo", -20);
+        repetirTexto("",20);
+        repetirTexto("Hola Mundo");
+
+        const repetirTextoo = ()=>{
+            let texto= d.getElementById("ejercicio4-texto").value,
+                veces = d.getElementById("ejercicio4-veces").value;
+            if(!texto){
+                return alert("No ha ingresado un texto");
+            }else if(veces===undefined){
+                return alert("No ha ingresado el número de veces a repetir el texto");
+            }else if(veces===0){
+                return alert("El número de veces no puede ser 0");
+            }else if(Math.sign(veces)=== -1){
+                return alert("El número de veces no puede ser negativo");
+            }else{
+                let array = [];
+                for (let i = 0; i < veces; i++) {
+                    array.push(`${texto}, ${i+1}`);
+                }
+                alert(array);
+            }
+        }
+
+
+        /*5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".*/
+        console.log("-----------------🎈🎈Ejercicio 5🎈🎈-----------------");
+        console.log("");
+        const invertirPalabras = (cadena="")=>{
+            (!cadena)
+            ? console.warn("No ha ingresado una cadena de texot")
+            : console.log(cadena.split("").reverse().join(""));
+        }
+
+        invertirPalabras("Hola Mundo");
+        invertirPalabras("JavaScript es un lenguaje del front-end");
+
+        const invertirPalabrass = ()=>{
+            let cadena= d.getElementById("ejercicio5-cadena").value;
+            (!cadena)
+            ? alert("No ha ingresado una cadena de texot")
+            : alert(cadena.split("").reverse().join(""));
+        }
+        
+        /*6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.*/
+        console.log("-----------------🎈🎈Ejercicio 6🎈🎈-----------------");
+        console.log("");
+        const contarPalabraRepetida = (cadena="",palabra=undefined)=>{
+            if(!cadena){
+                return console.log("No ha ingresado un texto");
+            }else if(palabra===undefined){
+                return console.log("No ha ingresado una palabra a buscar");
+            }else{
+                let i=0,
+                contador=0;
+                while(i !== -1){
+                    i=cadena.indexOf(palabra, i);
+                    console.log(i);
+                    if(i!==-1){
+                        i++;
+                        contador++;
+                    }
+                }
+                console.info(`La palabra ${palabra} se repite ${contador} veces.`)
+
+            }
+        }
+        
+        
+        contarPalabraRepetida();
+        contarPalabraRepetida("","Mundo");
+        contarPalabraRepetida("Hola Mundo es Mundo","Mundo");
+        contarPalabraRepetida("Hola Mundo es Mundo tiene muchos Mundo dentro del Mundo","Mundo");
+
+        const contarPalabraRepetidaa = ()=>{
+            let cadena= d.getElementById("ejercicio6-cadena").value;
+            let palabra= d.getElementById("ejercicio6-palabra").value;
+            if(!cadena){
+                return alert("No ha ingresado un texto");
+            }else if(palabra===undefined){
+                return alert("No ha ingresado una palabra a buscar");
+            }else{
+                let i=0,
+                contador=0;
+                while(i !== -1){
+                    i=cadena.indexOf(palabra, i);
+                    console.log(i);
+                    if(i!==-1){
+                        i++;
+                        contador++;
+                    }
+                }
+                alert(`La palabra ${palabra} se repite ${contador} veces.`)
+
+            }
+        }
+
+        
+        /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
+        console.log("-----------------🎈🎈Ejercicio 7🎈🎈-----------------");
+        console.log("");
+        const palindromo = (palabra="")=>{
+            if(!palabra){
+                console.log("No ha ingresado una palabra o frase");
+            }else{
+                palabraa = palabra.toLowerCase();
+                let alReves= palabraa.split("").reverse().join("");
+
+                return (palabra===alReves)
+                    ? console.info(`Sí es un palíndromo, palabra original "${palabraa}, palabra al revés "${alReves}"`)
+                    : console.info(`No es un palíndromo, palabra original "${palabraa}, palabra al revés "${alReves}"`);
+
+            }
+
+        }
+        palindromo();
+        palindromo("Hola Mundo");
+        palindromo("Salas");
+
+        const palindromoo = ()=>{
+            let palabra= d.getElementById("ejercicio7-palabra").value;
+
+            if(!palabra){
+                alert("No ha ingresado una palabra o frase");
+            }else{
+                palabraa = palabra.toLowerCase();
+                let alReves= palabraa.split("").reverse().join("");
+
+                return (palabra===alReves)
+                    ? alert(`Sí es un palíndromo, palabra original "${palabraa}, palabra al revés "${alReves}"`)
+                    : alert(`No es un palíndromo, palabra original "${palabraa}, palabra al revés "${alReves}"`);
+
+            }
+
+        }
+
+        /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.*/
+        console.log("-----------------🎈🎈Ejercicio 8🎈🎈-----------------");
+        console.log("");
+        const eliminarCaracteres = (cadena="",patron="")=>{
+            (!cadena)
+            ? console.warn("No ha ingresado el texto")
+            : (!patron)
+                ? console.warn("No ha ingresado un patron de caracteres")
+                : console.info(cadena.replace(new RegExp(patron,"ig"),""))
+        }
+
+        eliminarCaracteres();
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "[a-z]");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xy");
+
+        const eliminarCaracteress = ()=>{
+            let cadena= d.getElementById("ejercicio8-cadena").value,
+                patron= d.getElementById("ejercicio8-patron").value;
+            (!cadena)
+            ? alert("No ha ingresado el texto")
+            : (!patron)
+                ? alert("No ha ingresado un patron de caracteres")
+                : alert(cadena.replace(new RegExp(patron,"ig"),""))
+        }
+
+        /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600.*/
+        console.log("-----------------🎈🎈Ejercicio 9🎈🎈-----------------");
+        console.log("");
+        const numeroAleatorio = ()=>{
+            console.log(Math.round(Math.random()*100)+500);
+        }
+
+        numeroAleatorio();
+
+        const numeroAleatorioo = ()=>{
+            alert(Math.round(Math.random()*100)+500);
+        }
+
+        /*10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.*/
+        console.log("-----------------🎈🎈Ejercicio 10🎈🎈-----------------");
+        console.log("");
+        const numeroCapicua =(numero=0)=>{
+            if(!numero){
+                console.warn("No ingresaste un número");
+            }else if(typeof(numero)!== "number"){
+                console.warn(`El valor ${numero} ingresado. No es un número.`);
+            }else{
+                numero = numero.toString();
+                let alReves = numero.split("").reverse().join("");
+
+                return (numero===alReves)
+                    ? console.info(`Sí es capícua, número original "${numero}, número al revés "${alReves}"`)
+                    : console.info(`No es capícua, número original "${numero}, número al revés "${alReves}"`);
+            }
+        }
+
+        numeroCapicua();
+        numeroCapicua("19");
+        numeroCapicua({});
+        numeroCapicua(2000);
+        numeroCapicua(2002);
+        numeroCapicua(18.99);
+        numeroCapicua(212.212);
+
+        const numeroCapicuaa =()=>{
+            let numero= d.getElementById("ejercicio10-numero").value;
+            numero =  parseFloat(numero);
+            if(!numero){
+                alert("No ingresaste un número");
+            }else if(typeof(numero)!== "number"){
+                //console.log(typeof(numero));
+                alert(`El valor ${numero} ingresado. No es un número.`);
+            }else{
+                numero = numero.toString();
+                let alReves = numero.split("").reverse().join("");
+
+                return (numero===alReves)
+                    ? alert(`Sí es capícua, número original "${numero}, número al revés "${alReves}"`)
+                    : alert(`No es capícua, número original "${numero}, número al revés "${alReves}"`);
+            }
+        }
+
+        /*11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
+        console.log("-----------------🎈🎈Ejercicio 11🎈🎈-----------------");
+        console.log("");
+        
+        const factorial = (numero = undefined)=>{
+            if(numero===undefined){
+                return console.warn("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return console.warn(`El valor ${numero} no es un número`);
+            }else if(numero===0){
+                return console.warn("El número no puede ser 0");
+            }else if(Math.sign(numero)===-1){
+                return console.warn("El número no puede ser negativo");
+            }else{
+                let factorial=1;
+                for (let i = numero; i > 1; i--){
+                    factorial *= i;     
+                }
+
+                console.info(`El factorial del número ${numero} es ${factorial}.`);
+            }
+        }
+
+        factorial();
+        factorial("Hola");
+        factorial(0);
+        factorial(-5);
+        factorial(5);
+        factorial(10);
+
+        const factoriall = ()=>{
+            let numero= d.getElementById("ejercicio11-numero").value;
+            numero = parseInt(numero);
+            if(numero===undefined){
+                return alert("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return alert(`El valor ${numero} no es un número`);
+            }else if(numero===0){
+                return alert("El número no puede ser 0");
+            }else if(Math.sign(numero)===-1){
+                return alert("El número no puede ser negativo");
+            }else{
+                let factorial=1;
+                for (let i = numero; i > 1; i--){
+                    factorial *= i;     
+                }
+
+                alert(`El factorial del número ${numero} es ${factorial}.`);
+            }
+        }
+
+        /*12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.*/
+        console.log("-----------------🎈🎈Ejercicio 12🎈🎈-----------------");
+        console.log("");
+        const numeroPrimo = (numero=undefined)=>{
+            if(numero===undefined){
+                return console.warn("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return console.warn(`El valor ${numero} no es un número`);
+            }else if(numero===0){
+                return console.warn("El número no puede ser 0");
+            }else if(numero===1){
+                return console.warn("El número no puede ser 1");
+            }else if(Math.sign(numero)===-1){
+                return console.warn("El número no puede ser negativo");
+            }else{
+                let divisible = false;
+                for (let i = 2; i < numero; i++) {
+                    if(numero%i===0){
+                        divisible = true;
+                        break;
+                    }
+                }
+                return (divisible)
+                    ? console.info(`El número ${numero}, NO es primo.`)
+                    : console.info(`El número ${numero} SÍ es primo.`)
+            }
+        }
+
+        numeroPrimo();
+        numeroPrimo("410");
+        numeroPrimo(-8);
+        numeroPrimo(true);
+        numeroPrimo(1);
+        numeroPrimo(0);
+        numeroPrimo(23);
+        numeroPrimo(200);
+
+        const numeroPrimoo = ()=>{
+            let numero= d.getElementById("ejercicio12-numero").value;
+            numero = parseInt(numero);
+            if(numero===undefined){
+                return alert("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return alert(`El valor ${numero} no es un número`);
+            }else if(numero===0){
+                return alert("El número no puede ser 0");
+            }else if(numero===1){
+                return alert("El número no puede ser 1");
+            }else if(Math.sign(numero)===-1){
+                return alert("El número no puede ser negativo");
+            }else{
+                let divisible = false;
+                for (let i = 2; i < numero; i++) {
+                    if(numero%i===0){
+                        divisible = true;
+                        break;
+                    }
+                }
+                return (divisible)
+                    ? alert(`El número ${numero}, NO es primo.`)
+                    : alert(`El número ${numero} SÍ es primo.`)
+            }
+        }
+        
+        /*13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.*/
+        console.log("-----------------🎈🎈Ejercicio 13🎈🎈-----------------");
+        console.log("");
+        const numeroParImpar = (numero=undefined)=>{
+            if(numero===undefined){
+                return console.warn("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return console.warn(`El valor ${numero} no es un número`);
+            }else{
+                return (numero%2===0)
+                    ? console.info(`El número ${numero} es Par`)
+                    : console.info(`El número ${numero} es Impar`)
+            }
+        }
+
+        numeroParImpar();
+        numeroParImpar("Mundo");
+        numeroParImpar(10);
+        numeroParImpar(9);
+
+        const numeroParImparr = ()=>{
+            let numero= d.getElementById("ejercicio13-numero").value;
+            numero = parseInt(numero);
+            if(numero===undefined){
+                return alert("No ha ingresado un número");
+            }else if(typeof(numero)!== "number"){
+                return alert(`El valor ${numero} no es un número`);
+            }else{
+                return (numero%2===0)
+                    ? alert(`El número ${numero} es Par`)
+                    : alert(`El número ${numero} es Impar`)
+            }
+        }
+
+        /*14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.*/
+        console.log("-----------------🎈🎈Ejercicio 14🎈🎈-----------------");
+        console.log("");
+        const gradosConversion = (grados=undefined,unidad=undefined)=>{
+            if(grados===undefined){
+                return console.warn("No ha ingresado grados a convertir");
+            }else if(typeof(grados)!== "number"){
+                return console.error(`El valor ${grados} ingresado no es un número`);
+            }else if(unidad===undefined){
+                return console.warn("No ha ingresado el tipo de grados a convertir");
+            }else if(typeof(unidad) !== "string" ){
+                return console.warn(`El valor ${unidad} ingresado, No es una cadena de texto`);
+            }else if(unidad.length !== 1 || !/(C|F)/.test(unidad)){
+                return console.warn("El valor de la unidad no se reconoce");
+            }else if(unidad === "C"){
+                return console.info(`${grados}°C = ${Math.round(grados * (9/5) + 32)}°F`)
+            }else if(unidad === "F"){
+                return console.info(`${grados}°F = ${Math.round((grados -32)* (5/9))}°C`);
+            }
+        }
+
+        gradosConversion();
+        gradosConversion("4");
+        gradosConversion(2);
+        gradosConversion(2,false);
+        gradosConversion(2,"Hola");
+        gradosConversion(100,"C");
+        gradosConversion(32,"F");
+
+        const gradosConversionn = ()=>{
+            let grados= d.getElementById("ejercicio14-grados").value;
+            let unidad= d.getElementById("ejercicio14-tipo").value;
+            grados = parseFloat(grados);
+            if(grados===undefined){
+                return alert("No ha ingresado grados a convertir");
+            }else if(typeof(grados)!== "number"){
+                return alert(`El valor ${grados} ingresado no es un número`);
+            }else if(unidad===undefined){
+                return alert("No ha ingresado el tipo de grados a convertir");
+            }else if(typeof(unidad) !== "string" ){
+                return alert(`El valor ${unidad} ingresado, No es una cadena de texto`);
+            }else if(unidad.length !== 1 || !/(C|F)/.test(unidad)){
+                return alert("El valor de la unidad no se reconoce");
+            }else if(unidad === "C"){
+                return alert(`${grados}°C = ${Math.round(grados * (9/5) + 32)}°F`)
+            }else if(unidad === "F"){
+                return alert(`${grados}°F = ${Math.round((grados -32)* (5/9))}°C`);
+            }
+        }
+
+        /*15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.*/
+        console.log("-----------------🎈🎈Ejercicio 15🎈🎈-----------------");
+        console.log("");
+        const baseBinaria = (numero=undefined, base=undefined)=>{
+            if(numero===undefined){
+                return console.warn("No ha ingresado un número a convertir a base binaria");
+            }else if(typeof(numero) !== "number"){
+                return console.warn(`El valor ${numero} ingresado no es un número`);
+            }else if(base===undefined){
+                return console.warn("No ha ingresado la base");
+            }else if(typeof(base) !== "number"){
+                return console.error(`El valor ${base} base, no es un número`);
+            }else if(base===2){
+                return console.info(`El ${numero} base ${base} = ${parseInt(numero,base)} base 10`)
+               
+            }else if(base===10){
+                return console.info(`El ${numero} base ${base} = ${numero.toString(2)} base 2`);
+
+            }else{
+                return console.error("El tipo de base no es válido.");
+            }
+
+        }
+        baseBinaria();
+        baseBinaria("2");
+        baseBinaria(100);
+        baseBinaria(100,"2");
+        baseBinaria(101,2);
+        baseBinaria(5,10);
+        baseBinaria(64,10);
+        baseBinaria(64,15);
+
+        const baseBinariaa = ()=>{
+            let numero= d.getElementById("ejercicio15-numero").value;
+            let base= d.getElementById("ejercicio15-base").value;
+            numero = parseFloat(numero);
+            base = parseInt(base);
+            if(numero===undefined){
+                return alert("No ha ingresado un número a convertir a base binaria");
+            }else if(typeof(numero) !== "number"){
+                return alert(`El valor ${numero} ingresado no es un número`);
+            }else if(base===undefined){
+                return alert("No ha ingresado la base");
+            }else if(typeof(base) !== "number"){
+                return alert(`El valor ${base} base, no es un número`);
+            }else if(base===2){
+                return alert(`El ${numero} base ${base} = ${parseInt(numero,base)} base 10`)
+               
+            }else if(base===10){
+                return alert(`El ${numero} base ${base} = ${numero.toString(2)} base 2`);
+
+            }else{
+                return alert("El tipo de base no es válido.");
+            }
+
+        }
+
+        /*16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.*/
+        console.log("-----------------🎈🎈Ejercicio 16🎈🎈-----------------");
+        console.log("");
+        const calculaMonto= (cantidad=undefined,descuento=0)=>{
+            if(cantidad===undefined){
+                return console.warn("No ha ingresado una cantidad");
+            }else if(typeof(cantidad) !== "number"){
+                return console.warn(`La cantidad ${cantidad} ingresada no es un número.`);
+            }else if(cantidad===0){
+                return console.error("La cantidad ingresada, No puede ser 0.");
+            }else if(Math.sign(cantidad)=== -1){
+                return console.error("La cantidad no pueder ser negativo.");
+            }else if(typeof(descuento) !== "number"){
+                return console.error(`El descuento ${descuento} ingresado, no es un número.`);
+            }else if(Math.sign(descuento) === -1){
+                return console.error("El descuento no puede ser un número negativo.");
+            }else{
+                return console.info(`$${cantidad} - ${descuento}% = $${cantidad - ((descuento*cantidad)/100)} Monto Final`);
+            }
+        }
+
+        calculaMonto();
+        calculaMonto("5");
+        calculaMonto(0);
+        calculaMonto(-200);
+        calculaMonto(1000,"20");
+        calculaMonto(1000,-20);
+        calculaMonto(500);
+        calculaMonto(10000,20);
+
+        const calculaMontoo= ()=>{
+            let cantidad= d.getElementById("ejercicio16-cantidad").value;
+            let descuento= d.getElementById("ejercicio16-des").value;
+            cantidad = parseFloat(cantidad);
+            descuento = parseFloat(descuento);
+            if(cantidad===undefined){
+                return alert("No ha ingresado una cantidad");
+            }else if(typeof(cantidad) !== "number"){
+                return alert(`La cantidad ${cantidad} ingresada no es un número.`);
+            }else if(cantidad===0){
+                return alert("La cantidad ingresada, No puede ser 0.");
+            }else if(Math.sign(cantidad)=== -1){
+                return alert("La cantidad no pueder ser negativo.");
+            }else if(typeof(descuento) !== "number"){
+                return alert(`El descuento ${descuento} ingresado, no es un número.`);
+            }else if(Math.sign(descuento) === -1){
+                return alert("El descuento no puede ser un número negativo.");
+            }else{
+                return alert(`$${cantidad} - ${descuento}% = $${cantidad - ((descuento*cantidad)/100)} Monto Final`);
+            }
+        }
+
+        
+        /*17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).*/
+        console.log("-----------------🎈🎈Ejercicio 17🎈🎈-----------------");
+        console.log("");
+        const calculaAnios = (fecha=undefined)=>{
+            if(fecha === undefined){
+                console.warn("No ha ingresado una fecha")
+            }else if(!(fecha instanceof Date)){
+                return console.error("Por favor, ingrese una fecha válida");
+            }else{
+
+                let tiempo = new Date().getTime() - fecha.getTime();
+
+                let anioMilisegundos= 1000*60*60*24*365;
+                let anios = Math.floor( tiempo / anioMilisegundos);
+
+                return (Math.sign(anios)===-1)
+                        ? console.info(`Faltan ${Math.abs(anios)} años para el año ${fecha.getFullYear()}`)
+                        : (Math.sign(anios)=== 1)
+                            ? console.info(`Han pasado ${anios} años desde el año ${fecha.getFullYear()}`)
+                            : console.info(`Estamos en el año actual ${fecha.getFullYear()}`)
+            }
+        }
+
+        calculaAnios();
+        calculaAnios(true);
+        calculaAnios({});
+        calculaAnios(new Date());
+        calculaAnios(new Date(2000,8,21));
+        calculaAnios(new Date(2080,8,21));
+
+        const calculaAnioss = ()=>{
+            let fecha= d.getElementById("ejercicio17-date").value;
+            fecha = new Date(fecha);
+            if(fecha === undefined){
+                alert("No ha ingresado una fecha")
+            }else if(!(fecha instanceof Date)){
+                return alert("Por favor, ingrese una fecha válida");
+            }else{
+
+                let tiempo = new Date().getTime() - fecha.getTime();
+
+                let anioMilisegundos= 1000*60*60*24*365;
+                let anios = Math.floor( tiempo / anioMilisegundos);
+
+                return (Math.sign(anios)===-1)
+                        ? alert(`Faltan ${Math.abs(anios)} años para el año ${fecha.getFullYear()}`)
+                        : (Math.sign(anios)=== 1)
+                            ? alert(`Han pasado ${anios} años desde el año ${fecha.getFullYear()}`)
+                            : alert(`Estamos en el año actual ${fecha.getFullYear()}`)
+            }
+        }
+
+        /*18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
+        console.log("-----------------🎈🎈Ejercicio 18🎈🎈-----------------");
+        console.log("");
+        const cuentaVocales = (cadena=undefined)=>{
+            if(cadena===undefined){
+                return console.warn("No ha ingresado una cadena de texto");
+            }else if(typeof(cadena) !== "string"){
+                return console.warn(`El valor ${cadena} no es una cadena de texto.`);
+            }else{
+                let vocales=0,
+                    consonantes=0;
+
+                cadena = cadena.toLocaleLowerCase();
+                for (const letra of cadena) {
+                    if(/[aeiouáéíóú]/.test(letra)){
+                        vocales++;
+
+                    }else if(/[bcdfghjklmnñpqrstvwxyz]/.test(letra)){
+                        consonantes++;
+
+                    }
+                    
+                }
+
+                return console.info(`La cadena "${cadena}" tiene Vocales: ${vocales}  y Consonantes: ${consonantes}`);
+            }
+        }
+
+        cuentaVocales();
+        cuentaVocales(true);
+        cuentaVocales(1234);
+        cuentaVocales("Hola");
+        cuentaVocales("Hola Mundo");
+
+        const cuentaVocaless = ()=>{
+            let cadena= d.getElementById("ejercicio18-cadena").value;
+            if(cadena===undefined){
+                return alert("No ha ingresado una cadena de texto");
+            }else if(typeof(cadena) !== "string"){
+                return alert(`El valor ${cadena} no es una cadena de texto.`);
+            }else{
+                let vocales=0,
+                    consonantes=0;
+
+                cadena = cadena.toLocaleLowerCase();
+                for (const letra of cadena) {
+                    if(/[aeiouáéíóú]/.test(letra)){
+                        vocales++;
+
+                    }else if(/[bcdfghjklmnñpqrstvwxyz]/.test(letra)){
+                        consonantes++;
+
+                    }
+                }
+
+                return alert(`La cadena "${cadena}" tiene Vocales: ${vocales}  y Consonantes: ${consonantes}`);
+            }
+        }
+
+        /*19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.*/
+        console.log("-----------------🎈🎈Ejercicio 19🎈🎈-----------------");
+        console.log("");
+        const validarNombre = (nombre=undefined)=>{
+            if(nombre===undefined){
+                return console.warn("No ha ingresado una cadena de texto");
+            }else if(typeof(nombre) !== "string"){
+                return console.warn(`El valor ${nombre} no es una cadena de texto.`);
+            }else{
+                let regla= /^[a-zA-ZÁÉÍÓÚáéíóúÑn\s]+$/g.test(nombre);
+
+                return (regla)
+                    ? console.info(`El nombre ${nombre}, Sí es válido.`)
+                    : console.info(`El nombre ${nombre}, NO es válido.`)
+            }
+        }
+
+        validarNombre();
+        validarNombre(1234);
+        validarNombre(true);
+        validarNombre("Mario");
+        validarNombre("Mario Ac");
+        validarNombre("Juan Carlos2");
+
+        const validarNombree = ()=>{
+            let nombre= d.getElementById("ejercicio19-nombre").value;
+            if(nombre===undefined){
+                return alert("No ha ingresado una cadena de texto");
+            }else if(typeof(nombre) !== "string"){
+                return alert(`El valor ${nombre} no es una cadena de texto.`);
+            }else{
+                let regla= /^[a-zA-ZÁÉÍÓÚáéíóúÑn\s]+$/g.test(nombre);
+
+                return (regla)
+                    ? alert(`El nombre ${nombre}, Sí es válido.`)
+                    : alert(`El nombre ${nombre}, NO es válido.`)
+            }
+        }
+        
+        /*20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
+        console.log("-----------------🎈🎈Ejercicio 20🎈🎈-----------------");
+        console.log("");
+        const validarCorreo = (correo=undefined)=>{
+            if(correo===undefined){
+                return console.warn("No ha ingresado un email");
+            }else if(typeof(correo) !== "string"){
+                return console.warn(`El valor ${correo} no es un correo válido.`);
+            }else{
+                let regla= /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo);
+
+                return (regla)
+                    ? console.info(`El correo ${correo}, Sí es válido.`)
+                    : console.info(`El correo ${correo}, NO es válido.`)
+            }
+        }
+        validarCorreo();
+        validarCorreo(9);
+        validarCorreo("marioac");
+        validarCorreo("marioac@gmail.com");
+        validarCorreo("marioac@");
+        validarCorreo("marioac@gmail");
+
+        const validarCorreoo = ()=>{
+            let correo= d.getElementById("ejercicio20-correo").value;
+            if(correo===undefined){
+                return alert("No ha ingresado un email");
+            }else if(typeof(correo) !== "string"){
+                return alert(`El valor ${correo} no es un correo válido.`);
+            }else{
+                let regla= /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo);
+
+                return (regla)
+                    ? alert(`El correo ${correo}, Sí es válido.`)
+                    : alert(`El correo ${correo}, NO es válido.`)
+            }
+        }
+
+        /*21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].*/
+        console.log("-----------------🎈🎈Ejercicio 21🎈🎈-----------------");
+        console.log("");
+        const arrayNum = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return console.error(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            const arrayDos = array.map(numero => numero*numero);
+
+            return console.info(`Array original: ${array}, Array elevado al cuadrado: ${arrayDos}`);
+        }
+
+        arrayNum();
+        arrayNum("Hola");
+        arrayNum({});
+        arrayNum(true);
+        arrayNum([]);
+        arrayNum([1,2,"Hola",4,5,"Mundo"]);
+        arrayNum([1,2,3,4,5]);
+
+        const arrayNumm = ()=>{
+            let arrayy= d.getElementById("ejercicio21-array").value;
+            
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return alert(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            const arrayDos = array.map(numero => numero*numero);
+
+            return alert(`Array original: ${array}, Array elevado al cuadrado: ${arrayDos}`);
+        }
+
+        
+        /*22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].*/
+        console.log("-----------------🎈🎈Ejercicio 22🎈🎈-----------------");
+        console.log("");
+        const numMaxMin = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return console.error(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            return console.info(`Array original: ${array}\n Mayor: ${Math.max(...array)} \n Menor: ${Math.min(...array)} `);
+        }
+
+        numMaxMin();
+        numMaxMin(false);
+        numMaxMin("Mundo");
+        numMaxMin([1,"Hola",2]);
+        numMaxMin([8,4,19,25,99]);
+        numMaxMin([17,-55,1,-80,99,55]);
+
+        const numMaxMinn = ()=>{
+            let arrayy= d.getElementById("ejercicio22-array").value;
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return alert(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            return alert(`Array original: ${array}\n Mayor: ${Math.max(...array)} \n Menor: ${Math.min(...array)} `);
+        }
+
+        /*23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.*/
+        console.log("-----------------🎈🎈Ejercicio 23🎈🎈-----------------");
+        console.log("");
+        const objArreglo = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return console.error(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            return console.info({
+                pares: array.filter(numero => numero % 2 ===0),
+                impares: array.filter(numero => numero % 2 ===1)            
+            });
+        }
+
+        objArreglo();
+        objArreglo("Mundo");
+        objArreglo([]);
+        objArreglo([2,4,"Hola",6,7])
+        objArreglo([1,2,3,4,5,6,7,8,9,10]);
+
+        const objArregloo = ()=>{
+            let arrayy= d.getElementById("ejercicio23-array").value;
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return alert(`El valor ${numero}, NO es un número`);
+                }
+            }
+            
+            const obj = {
+                pares: array.filter(numero => numero % 2 ===0),
+                impares: array.filter(numero => numero % 2 ===1) 
+            }
+            return alert(
+                `Pares: ${obj.pares}\nImpares: ${obj.impares}` 
+            );
+        }
+
+        /*24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.*/
+        console.log("-----------------🎈🎈Ejercicio 24🎈🎈-----------------");
+        console.log("");
+        const arrayAD = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return console.error(`El valor ${numero}, NO es un número`);
+                }
+            }
+
+            return console.info({
+                array,
+                asc: array.map(numero => numero).sort(),
+                desc: array.map(numero => numero).sort().reverse()
+            });
+        }
+
+        arrayAD();
+        arrayAD("Mundo");
+        arrayAD({});
+        arrayAD([]);
+        arrayAD([2,1,5,6,"Hola"]);
+        arrayAD([8,6,2,9,4]);
+
+        const arrayADD = ()=>{
+            let arrayy= d.getElementById("ejercicio24-array").value;
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return alert(`El valor ${numero}, NO es un número`);
+                }
+            }
+            const obj = {
+                asc: array.map(numero => numero).sort(),
+                desc: array.map(numero => numero).sort().reverse()
+            }
+
+            return alert(`asc: ${obj.asc}\ndesc: ${obj.desc}`);
+        }
+        
+        /*25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].*/
+        console.log("-----------------🎈🎈Ejercicio 25🎈🎈-----------------");
+        console.log("");
+        const arrayDuplicados = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+            if(array.length===1){
+                return console.warn(`El arreglo debe tener al menos dos elementos`);
+            }
+            
+            return console.info({
+                array,
+                noDuplicados: array.filter((value, index, self) => self.indexOf(value) === index),
+            });
+
+            /*return console.info({
+                array,
+                noDuplicados: [...new Set(array)]
+            });*/
+        }
+
+        arrayDuplicados();
+        arrayDuplicados({});
+        arrayDuplicados([]);
+        arrayDuplicados([2]);
+        arrayDuplicados(["x",10,"x",2,"10",10,true,true]);
+        arrayDuplicados();
+
+        const arrayDuplicadoss = ()=>{
+            let arrayy= d.getElementById("ejercicio25-array").value;
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+            if(array.length===1){
+                return alert(`El arreglo debe tener al menos dos elementos`);
+            }
+            const obj = {
+                noDuplicados: array.filter((value, index, self) => self.indexOf(value) === index),
+            }
+            
+            return alert(`No duplicados: ${obj.noDuplicados}`);
+
+            /*return console.info({
+                array,
+                noDuplicados: [...new Set(array)]
+            });*/
+        }
+        
+        /*26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
+        console.log("-----------------🎈🎈Ejercicio 26🎈🎈-----------------");
+        console.log("");
+
+        const arrayPromedio = (array = undefined)=>{
+            if(array===undefined){
+                return console.warn("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return console.warn(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return console.warn(`El arreglo está vacío`);
+            }
+
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return console.error(`El valor ${numero}, NO es un número`);
+                }
+            }
+            
+            return console.info(
+                array.reduce((total,numero,index,array)=>{
+                    total +=numero;
+                    if(index === array.length-1){
+                        return `El promedio es de ${array.join(" + ")} es de ${total / array.length}`;
+                    }else{
+                        return total;
+                    }
+                })
+            );
+        }
+        
+        arrayPromedio();
+        arrayPromedio(true);
+        arrayPromedio([]);
+        arrayPromedio("Hola");
+        arrayPromedio([10,10]);
+        arrayPromedio([1,2,3,4,5,6,7,8,9,0]);
+
+        const arrayPromedioo = ()=>{
+            let arrayy= d.getElementById("ejercicio26-array").value;
+            array = JSON.parse(arrayy);
+            if(array===undefined){
+                return alert("No ha ingresado un arreglo");
+            }
+            if(!(array instanceof Array)){
+                return alert(`El valor ${array} no es un arreglo`);
+            }
+            if(array.length===0){
+                return alert(`El arreglo está vacío`);
+            }
+
+            for (const numero of array) {
+                if(typeof(numero) !== "number"){
+                    return alert(`El valor ${numero}, NO es un número`);
+                }
+            }
+            
+            return alert(
+                array.reduce((total,numero,index,array)=>{
+                    total +=numero;
+                    if(index === array.length-1){
+                        return `El promedio es de ${array.join(" + ")} es de ${total / array.length}`;
+                    }else{
+                        return total;
+                    }
+                })
+            );
+        }
+
+
+
+    </script>
+</body>
+</html>
